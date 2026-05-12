@@ -28,6 +28,15 @@ class ButlerConfig:
     project_make_target: str = "make help"
 
 
+def find_project_root(start: Path | None = None) -> Path:
+    """Walk up from *start* (default: cwd) to find the directory containing pyproject.toml."""
+    current = (start or Path.cwd()).resolve()
+    for directory in (current, *current.parents):
+        if (directory / "pyproject.toml").is_file():
+            return directory
+    raise FileNotFoundError(f"No pyproject.toml found in {current} or any parent directory")
+
+
 def load_config(project_root: Path | None = None) -> ButlerConfig:
     if project_root is None:
         project_root = Path.cwd()
