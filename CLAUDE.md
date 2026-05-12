@@ -69,6 +69,13 @@ Describe shipped behavior, not internal task bookkeeping.
 - Do not write an entry that only says a task was completed.
 - Group related work into one bullet rather than one bullet per sub-task.
 
+## Agent Invocation
+
+When an agent is referenced with `@.claude/agents/<name>.agent.md`, Claude acts
+as that agent in the current conversation — no separate process is spawned.
+Workflow Guardian invoked this way must spawn **Implementation Worker** (not
+itself) for the coding phase after requirements are confirmed.
+
 ## What NOT to Do
 
 - Do not write code before the requirements spec is confirmed.
