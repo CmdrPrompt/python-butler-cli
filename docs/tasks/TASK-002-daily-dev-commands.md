@@ -54,4 +54,4 @@ som `make`. Projektrot löses från cwd via `find_project_root()` i config-modul
 
 **Branch:** `git checkout task/002-daily-dev-commands`
 **Stage:** `git add src/butler/commands/__init__.py src/butler/commands/dev.py src/butler/config.py src/butler/cli.py tests/test_dev_commands.py docs/tasks/TASK-002-daily-dev-commands.md CHANGELOG.md`
-**Commit:** `Add daily dev commands: lint, fix, stage, test, install, setup`
+**Commit:** `git commit -m "Add daily dev commands: lint, fix, stage, test, install, setup"`
