@@ -2,7 +2,7 @@
 
 ## Status
 
-todo
+done
 
 ## Description
 
@@ -22,10 +22,10 @@ Levererar:
 
 ## Acceptance criteria
 
-- [ ] `butler --help` skriver ut en kommandolista utan fel
-- [ ] `ButlerConfig` läser korrekt från `[tool.butler]` i `pyproject.toml`
-- [ ] Saknad `[tool.butler]`-sektion returnerar alla defaults
-- [ ] `make lint` och `make test` passerar
+- [x] `butler --help` skriver ut en kommandolista utan fel
+- [x] `ButlerConfig` läser korrekt från `[tool.butler]` i `pyproject.toml`
+- [x] Saknad `[tool.butler]`-sektion returnerar alla defaults
+- [x] `make lint` och `make test` passerar
 
 ## Branch
 
@@ -33,5 +33,17 @@ Levererar:
 
 ## Completion
 
-**Stage:** `git add src/butler/cli.py src/butler/config.py tests/test_config.py pyproject.toml CHANGELOG.md docs/tasks/TASK-001-cli-skeleton.md`
+**Date:** 2026-05-12
+**Summary:** Skapade `butler` CLI-skelett med Click-grupp och `--help`. Lade till `src/butler/config.py` som läser `[tool.butler]` från `pyproject.toml` och returnerar `ButlerConfig` med defaults för alla REQ-03-nycklar. 6 tester täcker saknad sektion, partiell sektion, alla nycklar och okända nycklar. Täckning 81%.
+**Files changed:**
+
+- `pyproject.toml` — modified
+- `src/butler/cli.py` — created
+- `src/butler/config.py` — created
+- `tests/__init__.py` — created
+- `tests/test_config.py` — created
+- `CHANGELOG.md` — created
+
+**Branch:** `git checkout task/001-cli-skeleton`
+**Stage:** `git add src/butler/cli.py src/butler/config.py tests/__init__.py tests/test_config.py pyproject.toml CHANGELOG.md docs/tasks/TASK-001-cli-skeleton.md`
 **Commit:** `git commit -m "Add CLI skeleton with config loading"`
