@@ -126,6 +126,10 @@ uv add --dev \
   "python-butler-cli @ git+https://github.com/CmdrPrompt/python-butler-cli.git"
 ```
 
+**Förutsättning:** `uv add` kräver att projektet redan har en
+`pyproject.toml`. I ett helt nytt projekt utan `pyproject.toml` måste
+`uv init` köras först.
+
 Versionspin med tagg:
 
 ```bash

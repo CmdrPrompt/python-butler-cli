@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Documentation
+
+- Klargjort att `uv add` kräver en befintlig `pyproject.toml` — README och
+  REQUIREMENTS.md anger nu att `uv init` måste köras först i helt nya
+  projekt (TASK-011)
+
 ### Added
 
 - `butler sync` kopierar paketets inbyggda agentfiler (8 styrningsagenter) till `.claude/agents/` och `.github/agents/` i det konsumerande projektet; idempotent med checksumma-jämförelse och rapporterar `created`, `updated` eller `unchanged` per fil (TASK-006)

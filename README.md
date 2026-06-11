@@ -18,6 +18,10 @@ Install once, run everywhere. No git subtree required.
 ## Adopting in a new project
 
 ```bash
+# 0. If the project has no pyproject.toml yet, initialize one first
+#    (uv add requires an existing pyproject.toml — it does not create one)
+uv init
+
 # 1. Add butler as a dev dependency
 uv add --dev "python-butler-cli @ git+https://github.com/CmdrPrompt/python-butler-cli.git"
 
