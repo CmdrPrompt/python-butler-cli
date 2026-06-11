@@ -44,4 +44,4 @@ Agentfilerna lagras som paketresurser under `src/butler/agents/` och läses via
 - `CHANGELOG.md` — uppdaterad
 **Branch:** `git checkout task/006-agent-sync-command`
 **Stage:** `git add src/butler/agents/ src/butler/commands/sync.py tests/test_sync_command.py src/butler/cli.py pyproject.toml CHANGELOG.md docs/tasks/TASK-006-agent-sync-command.md .github/agents/test-design-reviewer.agent.md`
-**Commit:** `Add butler sync command for agent distribution (REQ-05)`
+**Commit:** `git commit -m "Add butler sync command for agent distribution (REQ-05)"`
